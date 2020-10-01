@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class TodoNotFoundAdvice {
 
     @ResponseBody
-    @ExceptionHandler(TodoNotFoundException.class)
+    @ExceptionHandler(ResourceNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    String todoNotFoundHandler(TodoNotFoundException ex){
+    String todoNotFoundHandler(ResourceNotFoundException ex){
         return ex.getMessage();
     }
 }
